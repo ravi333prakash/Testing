@@ -1,0 +1,428 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1605250683.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"Request"
+	],
+	"properties": {
+		"Request": {
+			"$id": "#root/Request", 
+			"title": "Request", 
+			"type": "object",
+			 "allOf": [{
+                    "oneOf": [{
+                            "required": [
+                                "requestId"
+                            ]
+                        }, {
+                            "required": [
+                                "request_id"
+                            ]
+                        }
+                    ]
+                }, {
+                    "oneOf": [{
+                            "required": [
+                                "source_node"
+                            ]
+                        }, {
+                            "required": [
+                                "sourceNode"
+                            ]
+                        }
+                    ]
+                },{
+                    "oneOf": [{
+                            "required": [
+                                "request_timestamp"
+                            ]
+                        }, {
+                            "required": [
+                                "timeStamp"
+                            ]
+                        }
+                    ]
+                }
+            ],
+			"required": [
+				"action",
+				"order_information"
+			],
+			"properties": {
+				"requestId": {
+					"$id": "#root/Request/request_id", 
+					"title": "Request_id", 
+					"type": "string",
+					"default": "",
+					"pattern": "[^ ]"
+				},
+				"request_id":{
+					"$id": "#root/Request/request_id", 
+					"title": "Request_id", 
+					"type": "string",
+					"default": "",
+					"pattern": "[^ ]"
+				},
+				"request_timestamp": {
+					"$id": "#root/Request/request_timestamp", 
+					"title": "Request_timestamp", 
+					"type": "string",
+					"default": "",
+					"pattern": "[^ ]"
+				},
+				"timeStamp": {
+					"$id": "#root/Request/request_timestamp", 
+					"title": "Request_timestamp", 
+					"type": "string",
+					"default": "",
+					"pattern": "[^ ]"
+				},
+				"action": {
+					"$id": "#root/Request/action", 
+					"title": "Action", 
+					"type": "string",
+					"default": "",
+					"pattern": "[^ ]"
+				},
+				"userid": {
+					"$id": "#root/Request/userid", 
+					"title": "Userid", 
+					"type": "string",
+					"default": "",
+					"pattern": "^.*$"
+				},
+				"username": {
+					"$id": "#root/Request/username", 
+					"title": "Username", 
+					"type": "string",
+					"default": "",
+					"pattern": "^.*$"
+				},
+				"source_node": {
+					"$id": "#root/Request/source_node", 
+					"title": "Source_node", 
+					"type": "string",
+					"default": "",
+					"pattern": "[^ ]"
+				},
+				"sourceNode": {
+					"$id": "#root/Request/source_node", 
+					"title": "Source_node", 
+					"type": "string",
+					"default": "",
+					"pattern": "[^ ]"
+				},
+				"order_information": {
+					"$id": "#root/Request/order_information", 
+					"title": "Order_information", 
+					"type": "object",
+					"required": [
+						"order_type",
+						"provisioning",
+						"dataset"
+					],
+					"properties": {
+						"order_type": {
+							"$id": "#root/Request/order_information/order_type", 
+							"title": "Order_type", 
+							"type": "string",
+					 		"default": "",
+					        "pattern": "[^ ]"
+						},
+						"customer_name": {
+							"$id": "#root/Request/order_information/customer_name", 
+							"title": "Customer_name", 
+							"type": "string",
+							"default": "",
+							"pattern": "^.*$"
+						},
+						"provisioning": {
+							"$id": "#root/Request/order_information/provisioning", 
+							"title": "Provisioning", 
+							"type": "object",
+							"required": [
+								"profiles"
+							],
+							"properties": {
+								"profiles": {
+									"$id": "#root/Request/order_information/provisioning/profiles", 
+									"title": "Profiles", 
+									"type": "array",
+									"default": [],
+									"items":{
+										"$id": "#root/Request/order_information/provisioning/profiles/items", 
+										"title": "Items", 
+										"type": "object",
+										"required": [
+											"accounts"
+										],
+										"properties": {
+											"accounts": {
+												"$id": "#root/Request/order_information/provisioning/profiles/items/accounts", 
+												"title": "Accounts", 
+												"type": "array",
+												"default": [],
+												"items":{
+													"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items", 
+													"title": "Items", 
+													"type": "object",
+													"required": [
+														"service_groups"
+													],
+													"properties": {
+														"service_groups": {
+															"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups", 
+															"title": "Service_groups", 
+															"type": "array",
+															"default": [],
+															"items":{
+																"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items", 
+																"title": "Items", 
+																"type": "object",
+																"required": [
+																	"services"
+																],
+																"properties": {
+																	"services": {
+																		"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services", 
+																		"title": "Services", 
+																		"type": "array",
+																		"default": [],
+																		"items":{
+																			"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items", 
+																			"title": "Items", 
+																			"type": "object",
+																			"required": [
+																				"service_id"
+																		
+																				
+																			],
+																			"properties": {
+																				"service_id": {
+																					"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/service_id", 
+																					"title": "Service_id", 
+																					"type": "string",
+																					"default": "",
+																					"pattern": "^.*$"
+																				},
+																				"connection_type": {
+																					"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/connection_type", 
+																					"title": "Connection_type", 
+																					"type": "string",
+																					"default": "",
+																					"pattern": "^.*$"
+																				},
+																				"network_type ": {
+																					"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/network_type ", 
+																					"title": "Network_type ", 
+																					"type": "string",
+																					"default": "",
+																					"pattern": "^.*$"
+																				},
+																				"addresses": {
+																					"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses", 
+																					"title": "Addresses", 
+																					"type": "array",
+																					"minItems":1,
+																					"default": [],
+																					"items":{
+																						"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items", 
+																						"title": "Items", 
+																						"type": "object",
+																						"required": [
+																							"language_id"
+																						],
+																						"properties": {
+																							"address_type": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/address_type", 
+																								"title": "Address_type", 
+																								"type": "integer",
+																								"default": 0
+																							},
+																							"language_id": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/language_id", 
+																								"title": "Language_id", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "[^ ]"
+																							},
+																							"addr_line1": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/addr_line1", 
+																								"title": "Addr_line1", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"addr_line2": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/addr_line2", 
+																								"title": "Addr_line2", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"addr_line3": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/addr_line3", 
+																								"title": "Addr_line3", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"addr_line4": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/addr_line4", 
+																								"title": "Addr_line4", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"addr_line5": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/addr_line5", 
+																								"title": "Addr_line5", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"addr_line6": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/addr_line6", 
+																								"title": "Addr_line6", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"addr_line7": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/addr_line7", 
+																								"title": "Addr_line7", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"addr_line8": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/addresses/items/addr_line8", 
+																								"title": "Addr_line8", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							}
+																						}
+																					}
+
+																				},
+																				"subscriptions": {
+																					"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/subscriptions", 
+																					"title": "Subscriptions", 
+																					"type": "array",
+																					
+																					"default": [],
+																					"items":{
+																						"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/subscriptions/items", 
+																						"title": "Items", 
+																						"type": "object",
+																						"required": [
+																	
+																
+																						],
+																						"properties": {
+																							"plan_id": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/subscriptions/items/plan_id", 
+																								"title": "Plan_id", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"plan_name": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/subscriptions/items/plan_name", 
+																								"title": "Plan_name", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"plan_desc": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/subscriptions/items/plan_desc", 
+																								"title": "Plan_desc", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							},
+																							"is_base_plan": {
+																								"$id": "#root/Request/order_information/provisioning/profiles/items/accounts/items/service_groups/items/services/items/subscriptions/items/is_base_plan", 
+																								"title": "Is_base_plan", 
+																								"type": "string",
+																								"default": "",
+																								"pattern": "^.*$"
+																							}
+																						}
+																					}
+
+																				}
+																			}
+																		}
+
+																	}
+																}
+															}
+
+														}
+													}
+												}
+
+											}
+										}
+									}
+
+								}
+							}
+						}
+,
+						"dataset": {
+							"$id": "#root/Request/order_information/dataset", 
+							"title": "Dataset", 
+							"type": "object",
+							"required": [
+								"param"
+							],
+							"properties": {
+								"param": {
+									"$id": "#root/Request/order_information/dataset/param", 
+									"title": "Param", 
+									"type": "array",
+									"default": [],
+									"items":{
+										"$id": "#root/Request/order_information/dataset/param/items", 
+										"title": "Items", 
+										"type": "object",
+										"required": [
+											"id",
+											"value"
+										],
+										"properties": {
+											"id": {
+												"$id": "#root/Request/order_information/dataset/param/items/id", 
+												"title": "Id", 
+												"type": "string",
+												"default": "",
+												"pattern": "^.*$"
+											},
+											"value": {
+												"$id": "#root/Request/order_information/dataset/param/items/value", 
+												"title": "Value", 
+												"type": "string",
+												"default": "",
+												"pattern": "^.*$"
+											}
+										}
+									}
+
+								}
+							}
+						}
+
+					}
+				}
+
+			}
+		}
+
+	}
+}

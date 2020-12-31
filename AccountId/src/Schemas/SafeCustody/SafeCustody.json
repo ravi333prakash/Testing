@@ -1,0 +1,917 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1604319811.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"Request"
+	],
+	"properties": {
+		"Request": {
+			"$id": "#root/Request", 
+			"title": "Request", 
+			"type": "object",
+			"required": [
+				"request_id",
+				"feature",
+				"action",
+				"timeStamp",
+				"sourceNode",
+				"userid",
+				"username",
+				"order_information"
+			],
+			"properties": {
+				"request_id": {
+					"$id": "#root/Request/request_id", 
+					"title": "Request_id", 
+					"type": "string",
+					"default": "",
+					"minLength":1,
+					"examples": [
+						"11299311019148"
+					],
+					"pattern": "[^ ]"
+				},
+				"feature": {
+					"$id": "#root/Request/feature", 
+					"title": "Feature", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"SafeCustody"
+					],
+					"pattern": "^.*$"
+				},
+				"action": {
+					"$id": "#root/Request/action", 
+					"title": "Action", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"SafeCustody"
+					],
+					"pattern": "^.*$"
+				},
+				"timeStamp": {
+					"$id": "#root/Request/timeStamp", 
+					"title": "Timestamp", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"2020-04-29 15:39:55"
+					],
+					"pattern": "^.*$"
+				},
+				"sourceNode": {
+					"$id": "#root/Request/sourceNode", 
+					"title": "Sourcenode", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"CRM"
+					],
+					"pattern": "^.*$"
+				},
+				"userid": {
+					"$id": "#root/Request/userid", 
+					"title": "Userid", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"215"
+					],
+					"pattern": "^.*$"
+				},
+				"username": {
+					"$id": "#root/Request/username", 
+					"title": "Username", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"Zerouser"
+					],
+					"pattern": "^.*$"
+				},
+				"order_information": {
+					"$id": "#root/Request/order_information", 
+					"title": "Order_information", 
+					"type": "object",
+					"required": [
+						"order_type",
+						"dataset",
+						"service",
+						"service_subscription",
+						"safe_custody"
+					],
+					"properties": {
+						"order_type": {
+							"$id": "#root/Request/order_information/order_type", 
+							"title": "Order_type", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"SafeCustody"
+							],
+							"pattern": "^.*$"
+						},
+						"dataset": {
+							"$id": "#root/Request/order_information/dataset", 
+							"title": "Dataset", 
+							"type": "object",
+							"required": [
+								"param"
+							],
+							"properties": {
+								"param": {
+									"$id": "#root/Request/order_information/dataset/param", 
+									"title": "Param", 
+									"type": "array",
+									"default": [],
+									"items":{
+										"$id": "#root/Request/order_information/dataset/param/items", 
+										"title": "Items", 
+										"type": "object",
+										"required": [
+											"id",
+											"value"
+										],
+										"properties": {
+											"id": {
+												"$id": "#root/Request/order_information/dataset/param/items/id", 
+												"title": "Id", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"service_seq_id"
+												],
+												"pattern": "^.*$"
+											},
+											"value": {
+												"$id": "#root/Request/order_information/dataset/param/items/value", 
+												"title": "Value", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"170025351573"
+												],
+												"pattern": "^.*$"
+											}
+										}
+									}
+
+								}
+							}
+						}
+,
+						"service": {
+							"$id": "#root/Request/order_information/service", 
+							"title": "Service", 
+							"type": "object",
+							"required": [
+								"service_id",
+								"connection_type"
+							],
+							"properties": {
+								"service_id": {
+									"$id": "#root/Request/order_information/service/service_id", 
+									"title": "Service_id", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"50004630"
+									],
+									"pattern": "^.*$"
+								},
+								"connection_type": {
+									"$id": "#root/Request/order_information/service/connection_type", 
+									"title": "Connection_type", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"1"
+									],
+									"pattern": "^.*$"
+								}
+							}
+						}
+,
+						"service_subscription": {
+							"$id": "#root/Request/order_information/service_subscription", 
+							"title": "Service_subscription", 
+							"type": "object",
+							"required": [
+								"service_id",
+								"subscription_activation_date",
+								"connection_type",
+								"subscriptions"
+							],
+							"properties": {
+								"service_id": {
+									"$id": "#root/Request/order_information/service_subscription/service_id", 
+									"title": "Service_id", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"50004630"
+									],
+									"pattern": "^.*$"
+								},
+								"subscription_activation_date": {
+									"$id": "#root/Request/order_information/service_subscription/subscription_activation_date", 
+									"title": "Subscription_activation_date", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"2020-04-29"
+									],
+									"pattern": "^.*$"
+								},
+								"connection_type": {
+									"$id": "#root/Request/order_information/service_subscription/connection_type", 
+									"title": "Connection_type", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"1"
+									],
+									"pattern": "^.*$"
+								},
+								"subscriptions": {
+									"$id": "#root/Request/order_information/service_subscription/subscriptions", 
+									"title": "Subscriptions", 
+									"type": "array",
+									"default": [],
+									"items":{
+										"$id": "#root/Request/order_information/service_subscription/subscriptions/items", 
+										"title": "Items", 
+										"type": "object",
+										"required": [
+											"product_id",
+											"product_name",
+											"plan_id",
+											"plan_name",
+											"plan_desc",
+											"effective_date",
+											"expiry_date",
+											"is_base_plan",
+											"external_plan_id",
+											"status",
+											"offer_service_id",
+											"offer_service_name",
+											"subscription_charges",
+											"offerNetworkTypeId",
+											"rangeBased",
+											"quantity_based",
+											"offer_subscriber_type",
+											"addOnType",
+											"parentControl",
+											"service_profile",
+											"version_id"
+										],
+										"properties": {
+											"product_id": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/product_id", 
+												"title": "Product_id", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"24"
+												],
+												"pattern": "^.*$"
+											},
+											"product_name": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/product_name", 
+												"title": "Product_name", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"SafeCustody"
+												],
+												"pattern": "^.*$"
+											},
+											"plan_id": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/plan_id", 
+												"title": "Plan_id", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"9999999997"
+												],
+												"pattern": "^.*$"
+											},
+											"plan_name": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/plan_name", 
+												"title": "Plan_name", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"SuspensionStolen"
+												],
+												"pattern": "^.*$"
+											},
+											"plan_desc": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/plan_desc", 
+												"title": "Plan_desc", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"VAS Add On (MRC) - Temporary Service Suspension due to Overseas Travelling"
+												],
+												"pattern": "^.*$"
+											},
+											"effective_date": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/effective_date", 
+												"title": "Effective_date", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"29042020153953"
+												],
+												"pattern": "^.*$"
+											},
+											"expiry_date": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/expiry_date", 
+												"title": "Expiry_date", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"06042120153953"
+												],
+												"pattern": "^.*$"
+											},
+											"is_base_plan": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/is_base_plan", 
+												"title": "Is_base_plan", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"0"
+												],
+												"pattern": "^.*$"
+											},
+											"external_plan_id": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/external_plan_id", 
+												"title": "External_plan_id", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"9999999997"
+												],
+												"pattern": "^.*$"
+											},
+											"status": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/status", 
+												"title": "Status", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"1"
+												],
+												"pattern": "^.*$"
+											},
+											"offer_service_id": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/offer_service_id", 
+												"title": "Offer_service_id", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"20"
+												],
+												"pattern": "^.*$"
+											},
+											"offer_service_name": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/offer_service_name", 
+												"title": "Offer_service_name", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"VAS"
+												],
+												"pattern": "^.*$"
+											},
+											"subscription_charges": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges", 
+												"title": "Subscription_charges", 
+												"type": "array",
+												"default": [],
+												"items":{
+													"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items", 
+													"title": "Items", 
+													"type": "object",
+													"required": [
+														"charge_type",
+														"charge_code",
+														"charge_name",
+														"charge_desc",
+														"charge_amount",
+														"start_date",
+														"end_date",
+														"charge_tax",
+														"total_charge",
+														"charge_validity",
+														"charge_category",
+														"charge_id",
+														"discount_type",
+														"epc_enabled",
+														"quantity_based",
+														"charge_classification",
+														"charge_amount_type"
+													],
+													"properties": {
+														"charge_type": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_type", 
+															"title": "Charge_type", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"1"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_code": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_code", 
+															"title": "Charge_code", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"13"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_name": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_name", 
+															"title": "Charge_name", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"Registration Fee"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_desc": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_desc", 
+															"title": "Charge_desc", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"Registration Fee"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_amount": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_amount", 
+															"title": "Charge_amount", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"0.0"
+															],
+															"pattern": "^.*$"
+														},
+														"start_date": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/start_date", 
+															"title": "Start_date", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"29042020153953"
+															],
+															"pattern": "^.*$"
+														},
+														"end_date": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/end_date", 
+															"title": "End_date", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"26102020153953"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_tax": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_tax", 
+															"title": "Charge_tax", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"0.0000"
+															],
+															"pattern": "^.*$"
+														},
+														"total_charge": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/total_charge", 
+															"title": "Total_charge", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"0.0"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_validity": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_validity", 
+															"title": "Charge_validity", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"180"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_category": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_category", 
+															"title": "Charge_category", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"3"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_id": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_id", 
+															"title": "Charge_id", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"76"
+															],
+															"pattern": "^.*$"
+														},
+														"discount_type": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/discount_type", 
+															"title": "Discount_type", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"F"
+															],
+															"pattern": "^.*$"
+														},
+														"epc_enabled": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/epc_enabled", 
+															"title": "Epc_enabled", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"1"
+															],
+															"pattern": "^.*$"
+														},
+														"quantity_based": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/quantity_based", 
+															"title": "Quantity_based", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"N"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_classification": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_classification", 
+															"title": "Charge_classification", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"0"
+															],
+															"pattern": "^.*$"
+														},
+														"charge_amount_type": {
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/subscription_charges/items/charge_amount_type", 
+															"title": "Charge_amount_type", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"F"
+															],
+															"pattern": "^.*$"
+														}
+													}
+												}
+
+											},
+											"offerNetworkTypeId": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/offerNetworkTypeId", 
+												"title": "Offernetworktypeid", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"1"
+												],
+												"pattern": "^.*$"
+											},
+											"rangeBased": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/rangeBased", 
+												"title": "Rangebased", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"false"
+												],
+												"pattern": "^.*$"
+											},
+											"quantity_based": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/quantity_based", 
+												"title": "Quantity_based", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"N"
+												],
+												"pattern": "^.*$"
+											},
+											"offer_subscriber_type": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/offer_subscriber_type", 
+												"title": "Offer_subscriber_type", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"1"
+												],
+												"pattern": "^.*$"
+											},
+											"addOnType": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/addOnType", 
+												"title": "Addontype", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"0"
+												],
+												"pattern": "^.*$"
+											},
+											"parentControl": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/parentControl", 
+												"title": "Parentcontrol", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													""
+												],
+												"pattern": "^.*$"
+											},
+											"service_profile": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile", 
+												"title": "Service_profile", 
+												"type": "object",
+												"required": [
+													"profile_id",
+													"service",
+													"profile_name",
+													"service_category",
+													"network_type_id",
+													"created_by",
+													"feature"
+												],
+												"properties": {
+													"profile_id": {
+														"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/profile_id", 
+														"title": "Profile_id", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"SP_25"
+														],
+														"pattern": "^.*$"
+													},
+													"service": {
+														"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/service", 
+														"title": "Service", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"20"
+														],
+														"pattern": "^.*$"
+													},
+													"profile_name": {
+														"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/profile_name", 
+														"title": "Profile_name", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"SuspensionStolen"
+														],
+														"pattern": "^.*$"
+													},
+													"service_category": {
+														"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/service_category", 
+														"title": "Service_category", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"1"
+														],
+														"pattern": "^.*$"
+													},
+													"network_type_id": {
+														"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/network_type_id", 
+														"title": "Network_type_id", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"1"
+														],
+														"pattern": "^.*$"
+													},
+													"created_by": {
+														"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/created_by", 
+														"title": "Created_by", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"1000"
+														],
+														"pattern": "^.*$"
+													},
+													"feature": {
+														"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature", 
+														"title": "Feature", 
+														"type": "array",
+														"default": [],
+														"items":{
+															"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature/items", 
+															"title": "Items", 
+															"type": "object",
+															"required": [
+																"feature_id",
+																"feature_name",
+																"column_name",
+																"feature_hlr_name",
+																"type",
+																"value",
+																"external_system"
+															],
+															"properties": {
+																"feature_id": {
+																	"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature/items/feature_id", 
+																	"title": "Feature_id", 
+																	"type": "string",
+																	"default": "",
+																	"minLength":1,
+																	"examples": [
+																		"23"
+																	],
+																	"pattern": "^.*$"
+																},
+																"feature_name": {
+																	"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature/items/feature_name", 
+																	"title": "Feature_name", 
+																	"type": "string",
+																	"default": "",
+																	"examples": [
+																		"SuspensionStolen"
+																	],
+																	"pattern": "^.*$"
+																},
+																"column_name": {
+																	"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature/items/column_name", 
+																	"title": "Column_name", 
+																	"type": "string",
+																	"default": "",
+																	"examples": [
+																		"IsGPRSAllowed"
+																	],
+																	"pattern": "^.*$"
+																},
+																"feature_hlr_name": {
+																	"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature/items/feature_hlr_name", 
+																	"title": "Feature_hlr_name", 
+																	"type": "string",
+																	"default": "",
+																	"examples": [
+																		"NULL"
+																	],
+																	"pattern": "^.*$"
+																},
+																"type": {
+																	"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature/items/type", 
+																	"title": "Type", 
+																	"type": "string",
+																	"default": "",
+																	"examples": [
+																		"A"
+																	],
+																	"pattern": "^.*$"
+																},
+																"value": {
+																	"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature/items/value", 
+																	"title": "Value", 
+																	"type": "string",
+																	"default": "",
+																	"examples": [
+																		"true"
+																	],
+																	"pattern": "^.*$"
+																},
+																"external_system": {
+																	"$id": "#root/Request/order_information/service_subscription/subscriptions/items/service_profile/feature/items/external_system", 
+																	"title": "External_system", 
+																	"type": "string",
+																	"default": "",
+																	"examples": [
+																		"OCS"
+																	],
+																	"pattern": "^.*$"
+																}
+															}
+														}
+
+													}
+												}
+											}
+,
+											"version_id": {
+												"$id": "#root/Request/order_information/service_subscription/subscriptions/items/version_id", 
+												"title": "Version_id", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"1"
+												],
+												"pattern": "^.*$"
+											}
+										}
+									}
+
+								}
+							}
+						}
+,
+						"safe_custody": {
+							"$id": "#root/Request/order_information/safe_custody", 
+							"title": "Safe_custody", 
+							"type": "object",
+							"required": [
+								"service_id",
+								"account_id",
+								"start_date",
+								"end_date",
+								"suspension_charge_apply"
+							],
+							"properties": {
+								"service_id": {
+									"$id": "#root/Request/order_information/safe_custody/service_id", 
+									"title": "Service_id", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"50004630"
+									],
+									"pattern": "^.*$"
+								},
+								"account_id": {
+									"$id": "#root/Request/order_information/safe_custody/account_id", 
+									"title": "Account_id", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"40091823"
+									],
+									"pattern": "^.*$"
+								},
+								"start_date": {
+									"$id": "#root/Request/order_information/safe_custody/start_date", 
+									"title": "Start_date", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"29-04-2020 00:00:00"
+									],
+									"pattern": "^.*$"
+								},
+								"end_date": {
+									"$id": "#root/Request/order_information/safe_custody/end_date", 
+									"title": "End_date", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"06-05-2020 23:59:59"
+									],
+									"pattern": "^.*$"
+								},
+								"suspension_charge_apply": {
+									"$id": "#root/Request/order_information/safe_custody/suspension_charge_apply", 
+									"title": "Suspension_charge_apply", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"1"
+									],
+									"pattern": "^.*$"
+								}
+							}
+						}
+
+					}
+				}
+
+			}
+		}
+
+	}
+}

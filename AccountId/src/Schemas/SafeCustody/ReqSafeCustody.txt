@@ -1,0 +1,123 @@
+{
+    "Request": {
+        "request_id": "11299311019148",
+        "feature": "SafeCustody",
+        "action": "SafeCustody",
+        "timeStamp": "2020-04-29 15:39:55",
+        "sourceNode": "CRM",
+        "userid": "215",
+        "username": "Zerouser",
+        "order_information": {
+            "order_type": "SafeCustody",
+            "dataset": {
+                "param": [{
+                        "id": "service_seq_id",
+                        "value": "170025351573"
+                    }, {
+                        "id": "account_id",
+                        "value": "40091823"
+                    }, {
+                        "id": "upfront_payment",
+                        "value": "no"
+                    }, {
+                        "id": "profile_id",
+                        "value": "21067177"
+                    }, {
+                        "id": "service_id",
+                        "value": "50004630"
+                    }, {
+                        "id": "waive_off",
+                        "value": "false"
+                    }, {
+                        "id": "entity_id",
+                        "value": "1000"
+                    }
+                ]
+            },
+            "service": {
+                "service_id": "50004630",
+                "connection_type": "1"
+            },
+            "service_subscription": {
+                "service_id": "50004630",
+                "subscription_activation_date": "2020-04-29",
+                "connection_type": "1",
+                "subscriptions": [{
+                        "product_id": "24",
+                        "product_name": "SafeCustody",
+                        "plan_id": "9999999997",
+                        "plan_name": "SuspensionStolen",
+                        "plan_desc": "VAS Add On (MRC) - Temporary Service Suspension due to Overseas Travelling",
+                        "effective_date": "29042020153953",
+                        "expiry_date": "06042120153953",
+                        "is_base_plan": "0",
+                        "external_plan_id": "9999999997",
+                        "status": "1",
+                        "offer_service_id": "20",
+                        "offer_service_name": "VAS",
+                        "subscription_charges": [{
+                                "charge_type": "1",
+                                "charge_code": "13",
+                                "charge_name": "Registration Fee",
+                                "charge_desc": "Registration Fee",
+                                "charge_amount": "0.0",
+                                "start_date": "29042020153953",
+                                "end_date": "26102020153953",
+                                "charge_tax": "0.0000",
+                                "total_charge": "0.0",
+                                "charge_validity": "180",
+                                "charge_category": "3",
+                                "charge_id": "76",
+                                "discount_type": "F",
+                                "epc_enabled": "1",
+                                "quantity_based": "N",
+                                "charge_classification": "0",
+                                "charge_amount_type": "F"
+                            }
+                        ],
+                        "offerNetworkTypeId": "1",
+                        "rangeBased": "false",
+                        "quantity_based": "N",
+                        "offer_subscriber_type": "1",
+                        "addOnType": "0",
+                        "parentControl": "",
+                        "service_profile": {
+                            "profile_id": "SP_25",
+                            "service": "20",
+                            "profile_name": "SuspensionStolen",
+                            "service_category": "1",
+                            "network_type_id": "1",
+                            "created_by": "1000",
+                            "feature": [{
+                                    "feature_id": "23",
+                                    "feature_name": "SuspensionStolen",
+                                    "column_name": "IsGPRSAllowed",
+                                    "feature_hlr_name": "NULL",
+                                    "type": "A",
+                                    "value": "true",
+                                    "external_system": "OCS"
+                                }, {
+                                    "feature_id": "",
+                                    "feature_name": "MutipleActivationAllowed",
+                                    "column_name": "IsGPRSAllowed",
+                                    "feature_hlr_name": "HLR",
+                                    "type": "A",
+                                    "value": "false",
+                                    "external_system": "HLR"
+                                }
+                            ]
+                        },
+                        "version_id": "1"
+                    }
+                ]
+            },
+            "safe_custody": {
+                "service_id": "50004630",
+                "account_id": "40091823",
+                "start_date": "29-04-2020 00:00:00",
+                "end_date": "06-05-2020 23:59:59",
+                "suspension_charge_apply": "1"
+            }
+        }
+    }
+}

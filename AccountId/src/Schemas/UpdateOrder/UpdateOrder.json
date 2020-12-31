@@ -1,0 +1,210 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.com/object1604561307.json",
+    "title": "Root",
+    "type": "object",
+    "required": [
+        "Request"
+    ],
+    "properties": {
+        "Request": {
+            "$id": "#root/Request",
+            "title": "Request",
+            "type": "object",
+            "allOf": [{
+                    "oneOf": [{
+                            "required": [
+                                "requestId"
+                            ]
+                        }, {
+                            "required": [
+                                "request_id"
+                            ]
+                        }
+                    ]
+                },{
+                    "oneOf": [{
+                            "required": [
+                                "source_node"
+                            ]
+                        }, {
+                            "required": [
+                                "sourceNode"
+                            ]
+                        }
+                    ]
+                }
+            ],
+			 "required": ["action","dataset","feature"],
+
+            "properties": {
+                "requestId": {
+                    "$id": "#root/Request/requestId",
+                    "title": "Requestid",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "[^ ]",
+                    "examples": [
+                        "003-25437770"
+                    ]
+                },
+                "request_id": {
+                    "$id": "#root/Request/hii",
+                    "title": "hii",
+                    "type": "string",
+                    "default": "",
+                    "pattern": "[^ ]",
+                    "examples": [
+                        "003-25437770"
+                    ]
+                },
+                "timeStamp": {
+                    "$id": "#root/Request/timeStamp",
+                    "title": "Timestamp",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "Tue Jan 23 12:24:38 IST 2018"
+                    ],
+                    "pattern": "^.*$"
+                }, "timestamp": {
+                    "$id": "#root/Request/timeStamp",
+                    "title": "Timestamp",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "Tue Jan 23 12:24:38 IST 2018"
+                    ],
+                    "pattern": "^.*$"
+                },
+                "action": {
+                    "$id": "#root/Request/action",
+                    "title": "Action",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "UpdateOrder"
+                    ],
+                    "pattern": "[^ ]"
+                },
+                "username": {
+                    "$id": "#root/Request/username",
+                    "title": "Username",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "crmadmin"
+                    ],
+                    "pattern": "^.*$"
+                },
+                "sourceNode": {
+                    "$id": "#root/Request/sourceNode",
+                    "title": "Sourcenode",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "CRM"
+                    ],
+                    "pattern": "[^ ]"
+                },
+				"source_node": {
+                    "$id": "#root/Request/sourceNode",
+                    "title": "Sourcenode",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "CRM"
+                    ],
+                    "pattern": "[^ ]"
+                },
+                "feature": {
+                    "$id": "#root/Request/feature",
+                    "title": "Feature",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "UpdateOrder"
+                    ],
+                    "pattern": "^.*$"
+                },
+                "userid": {
+                    "$id": "#root/Request/userid",
+                    "title": "Userid",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "1"
+                    ],
+                    "pattern": "^.*$"
+                },
+                "dataset": {
+                    "$id": "#root/Request/dataset",
+                    "title": "Dataset",
+                    "type": "object",
+                    "required": [
+                        "param"
+                    ],
+                    "properties": {
+                        "param": {
+                            "$id": "#root/Request/dataset/param",
+                            "title": "Param",
+                            "type": "array",
+                            "default": [],
+                            "allOf": [{
+                                    "contains": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "string",
+                                                "pattern": "^order_id$"
+                                            },
+                                            "value": {
+                                                "type": "string",
+                                                "pattern": "[^ ,null]",
+                                                "minLength": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "items": {
+                                "$id": "#root/Request/dataset/param/items",
+                                "title": "Items",
+                                "type": "object",
+                                "required": [
+                                    "id",
+                                    "value"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "$id": "#root/Request/dataset/param/items/id",
+                                        "title": "Id",
+                                        "type": "string",
+                                        "default": "",
+                                        "examples": [
+                                            "order_id"
+                                        ],
+                                        "pattern": "^.*$"
+                                    },
+                                    "value": {
+                                        "$id": "#root/Request/dataset/param/items/value",
+                                        "title": "Value",
+                                        "type": "string",
+                                        "default": "",
+                                        "examples": [
+                                            "11315576132765"
+                                        ],
+                                        "pattern": "^.*$"
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
